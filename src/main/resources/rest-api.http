@@ -1,0 +1,33 @@
+### get views (first page)
+GET http://localhost:8080/api/views
+
+### get views after nextCursor(date)
+GET http://localhost:8080/api/views?next={{nextCursor}}
+
+### get profile view by viewee id (first page)
+GET http://localhost:8080/api/views/{{vieweeId}}
+
+### get profile view by viewee id after nextCursor(date)
+GET http://localhost:8080/api/views/{{vieweeId}}?next={{nextCursor}}
+
+### add view
+POST localhost:8080/api/views?viewerId={{viewerId}}&vieweeId={{vieweeId}}
+Content-Type: application/json
+
+### delete view by id
+DELETE http://localhost:8080/api/views/{{id}}
+
+### get users (first page)
+GET http://localhost:8080/api/users
+
+### get users after nextCursor(id)
+GET http://localhost:8080/api/users?next={{nextCursor}}
+
+### get user by id
+GET http://localhost:8080/api/users/{{id}}
+
+### add user
+POST localhost:8080/api/users
+Content-Type: application/json
+
+{"name": "Name", "surname": "Surname"}
